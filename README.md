@@ -155,72 +155,6 @@ cd ../contracts
 npm install
 ```
 
-### Configuration
-
-1. **Backend Environment Variables** (`backend/.env`)
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/ecuai
-JWT_SECRET=your_jwt_secret_here
-
-# Blockchain
-ETHEREUM_RPC_URL=https://sepolia.infura.io/v3/YOUR_KEY
-PRIVATE_KEY=your_private_key_here
-CONTRACT_ADDRESS=deployed_contract_address
-
-# OriginTrail DKG
-DKG_ENDPOINT=https://testnet.origintrail.io
-DKG_PRIVATE_KEY=your_dkg_private_key
-
-# IPFS
-PINATA_API_KEY=your_pinata_key
-PINATA_SECRET_KEY=your_pinata_secret
-
-# AI Runtime
-AI_SERVICE_URL=http://localhost:8000
-```
-
-2. **Frontend Environment Variables** (`frontend/.env.local`)
-```env
-NEXT_PUBLIC_API_URL=http://localhost:5000
-NEXT_PUBLIC_CHAIN_ID=11155111
-NEXT_PUBLIC_CONTRACT_ADDRESS=your_contract_address
-NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_project_id
-```
-
-### Running the Application
-
-1. **Start MongoDB**
-```bash
-mongod
-```
-
-2. **Start Backend API**
-```bash
-cd backend
-npm run dev
-```
-
-3. **Start AI Runtime**
-```bash
-cd ai-runtime
-uvicorn app:app --reload --port 8000
-```
-
-4. **Start Frontend**
-```bash
-cd frontend
-npm run dev
-```
-
-5. **Deploy Smart Contracts** (first time only)
-```bash
-cd contracts
-npx hardhat compile
-npx hardhat run scripts/deploy.ts --network sepolia
-```
-
-Visit `http://localhost:3000` to access the application.
 
 ## 📚 API Documentation
 
@@ -332,12 +266,6 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for deta
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🔗 Links
-
-- **Website**: [ecuai.io](https://ecuai.io)
-- **Documentation**: [docs.ecuai.io](https://docs.ecuai.io)
-- **Twitter**: [@ecuAI](https://twitter.com/ecuAI)
-- **Discord**: [Join our community](https://discord.gg/ecuai)
 
 ## 🙏 Acknowledgments
 
